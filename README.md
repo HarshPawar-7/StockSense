@@ -1,9 +1,6 @@
-Here's a professional yet visually appealing README.md file for your Stock Recommendation App:
-
 ```markdown
 # 📈 StockSense - AI-Powered Stock Recommendations
-
-![Dashboard Screenshot](https://i.imgur.com/JQZ1l7D.png)  
+  
 *A smart investment companion that helps you build your perfect portfolio*
 
 ## 🚀 Features
