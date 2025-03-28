@@ -1,1 +1,30 @@
 node_modules
+.env
+serviceAccountKey.json
+ 
+ The  .env  file is used to store the environment variables. The  serviceAccountKey.json  file is used to store the Firebase service account key. 
+ Step 3: Install the required packages 
+ To install the required packages, run the following command: 
+ npm install express cors firebase-admin dotenv 
+ Step 4: Create the Firebase project 
+ To create a Firebase project, follow the steps below: 
+ 
+ Go to the  Firebase Console. 
+ Click on the  Add project  button. 
+ Enter the project name and click on the  Continue  button. 
+ Click on the  Create project  button. 
+ 
+ Step 5: Create a Firebase service account 
+ To create a Firebase service account, follow the steps below: 
+ 
+ Go to the  Firebase Console. 
+ Click on the project name. 
+ Click on the  Project settings  icon. 
+ Click on the  Service accounts  tab. 
+ Click on the  Generate new private key  button. 
+ Click on the  Generate key  button. 
+ Save the  serviceAccountKey.json  file. 
+ 
+ Step 6: Create the  .env  file 
+ Create a new file named  .env  in the project root directory and add the following content: 
+ FIREBASE_PROJECT_ID=your-firebase-project-id

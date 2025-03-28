@@ -177,14 +177,17 @@ const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
-  // Event Handlers
   const handleRegister = async (e) => {
     e.preventDefault();
     
     // Validation
     if (password !== confirmPassword) {
       setError("Passwords don't match");
+      return;
+    }
+    
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters");
       return;
     }
     
@@ -200,19 +203,26 @@ const Register = () => {
       const response = await fetch("http://localhost:5000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password, token }),
+        body: JSON.stringify({ email, token }), // Removed password from backend request
       });
-
-      const data = await response.json();
-      
-      if (response.ok) {
-        localStorage.setItem("token", token);
-        navigate("/dashboard");
-      } else {
-        setError(data.error || "Registration failed");
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Registration failed");
       }
+  
+      // Success
+      localStorage.setItem("token", token);
+      navigate("/dashboard");
+      
     } catch (error) {
-      setError(error.message);
+      console.error('Registration error:', error);
+      setError(
+        error.message.includes('email-already-in-use') || 
+        error.message.includes('Email already')
+          ? "Email already in use. Please login instead."
+          : error.message
+      );
     } finally {
       setIsLoading(false);
     }

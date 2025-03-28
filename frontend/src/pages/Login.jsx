@@ -26,17 +26,23 @@ const Login = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token }),
       });
-
-      const data = await response.json();
-      
-      if (response.ok) {
-        localStorage.setItem("token", token);
-        navigate("/dashboard");
-      } else {
-        setError(data.error || "Invalid login credentials");
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Login failed');
       }
+  
+      const data = await response.json();
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(data));
+      navigate("/dashboard");
+      
     } catch (error) {
-      setError(error.message);
+      setError(
+        error.message.includes('Failed to fetch') 
+          ? "Network error. Please try again."
+          : error.message
+      );
     } finally {
       setIsLoading(false);
     }
