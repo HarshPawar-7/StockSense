@@ -84,25 +84,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## ✉️ Contact
 
 Project Maintainer - [Your Name](mailto:your.email@example.com)  
-Project Link - [https://github.com/yourusername/stock-recommendation-app](https://github.com/yourusername/stock-recommendation-app)
+Project Link - [https://github.com/yourusername/stock-recommendation-app](https://github.com/HarshPawar-7/StockSense)
 
 ---
 
-Made with ❤️ and ☕ by [Your Name]
+Made with ❤️ and ☕ by TechWizards
+
+Working Project Video Link - StockSense(https://drive.google.com/drive/folders/1gnnLuEgubpXC89Fbsfiqz-jcYRdXXr4y?usp=sharing)
 ```
-
-### Key Features of This README:
-1. **Visual Appeal** - Uses emojis and clean formatting
-2. **Comprehensive** - Covers all aspects of the project
-3. **Professional** - Maintains a serious tone while being engaging
-4. **Useful Sections** - Includes installation, usage, tech stack, and contribution guidelines
-5. **Responsive** - Renders well on GitHub and other platforms
-
-You can customize the screenshot URL, contact info, and other details as needed. For an even better presentation:
-
-1. Add actual screenshots (replace the placeholder URL)
-2. Include a demo video/gif
-3. Add badges for build status, license, etc.
-4. Consider adding a "Future Features" section
-
-Would you like me to add any additional sections or modify the existing ones?
