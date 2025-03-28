@@ -83,8 +83,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ✉️ Contact
 
-Project Maintainer - [Your Name](mailto:your.email@example.com)  
-Project Link - [https://github.com/yourusername/stock-recommendation-app](https://github.com/HarshPawar-7/StockSense)
+Project Maintainer - [TechWizards](mailto:anishbandal16@gmail.com)  
+Project Link - [https://github.com/HarshPawar-7/StockSense](https://github.com/HarshPawar-7/StockSense)
 
 ---
 
